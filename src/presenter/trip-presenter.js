@@ -12,8 +12,8 @@ export default class TripPresenter {
 
   init() {
     render(this.eventsList, this.tripEvents);
-    render(new CreationFormView(), this.eventsList.getElement());
     render(new EditorFormView(), this.eventsList.getElement());
+    render(new CreationFormView(), this.eventsList.getElement());
 
     for (let i = 0; i < 3; i++) {
       render(new WaypointListView(), this.eventsList.getElement());
