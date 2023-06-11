@@ -3,11 +3,13 @@ import CreationFormView from '../view/creation-form-view';
 import EditorFormView from '../view/editor-form-view';
 import WaypointListView from '../view/waypoint-list-view';
 import { render } from '../render';
+import Model from '../model/model.js';
 
 export default class TripPresenter {
   constructor() {
     this.tripEvents = document.querySelector('.trip-events');
     this.eventsList = new EventsListView();
+    this.model = new Model();
   }
 
   init() {
@@ -15,8 +17,12 @@ export default class TripPresenter {
     render(new EditorFormView(), this.eventsList.getElement());
     render(new CreationFormView(), this.eventsList.getElement());
 
+    const points = this.model.GetPoints();
+    const destinations = this.model.GetDestinations();
+    const offersByType = this.model.GetOffersByType();
+
     for (let i = 0; i < 3; i++) {
-      render(new WaypointListView(), this.eventsList.getElement());
+      render(new WaypointListView(points, destinations, offersByType), this.eventsList.getElement());
     }
   }
 }
