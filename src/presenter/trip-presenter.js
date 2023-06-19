@@ -21,8 +21,6 @@ export default class TripPresenter {
     const destinations = this.model.GetDestinations();
     const offersByType = this.model.GetOffersByType();
 
-    for (let i = 0; i < 3; i++) {
-      render(new WaypointListView(points, destinations, offersByType), this.eventsList.getElement());
-    }
+    render(new WaypointListView(points, destinations, offersByType), this.eventsList.getElement());
   }
 }
