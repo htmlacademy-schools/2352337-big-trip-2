@@ -1,4 +1,6 @@
 import dayjs from 'dayjs';
+import duration from 'dayjs/esm/plugin/duration';
+dayjs.extend(duration);
 
 const DATE_FORMAT = 'DD/MM/YY';
 const TIME_FORMAT = 'HH:mm';

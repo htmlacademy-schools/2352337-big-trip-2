@@ -103,7 +103,7 @@ export const Points = [
     'dateFrom': '2019-07-10T22:55:56.845Z',
     'dateTo': '2019-07-11T11:22:13.375Z',
     'destination': 1,
-    'id': '0',
+    'id': '1',
     'isFavorite': false,
     'offers': [3, 4],
     'type': 'bus'
@@ -113,7 +113,7 @@ export const Points = [
     'dateFrom': '2019-07-11T12:00:00.000Z',
     'dateTo': '2019-07-12T15:00:00.000Z',
     'destination': 2,
-    'id': '1',
+    'id': '2',
     'isFavorite': true,
     'offers': [5, 6],
     'type': 'train'
@@ -123,7 +123,7 @@ export const Points = [
     'dateFrom': '2019-07-12T16:00:00.000Z',
     'dateTo': '2019-07-13T18:00:00.000Z',
     'destination': 3,
-    'id': '2',
+    'id': '3',
     'isFavorite': false,
     'offers': [7, 8],
     'type': 'flight'
